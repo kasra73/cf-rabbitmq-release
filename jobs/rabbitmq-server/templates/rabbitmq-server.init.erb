@@ -236,17 +236,17 @@ wait_for_rabbitmq_clusterer_plugin_to_start_rabbitmq_app() {
 
 stop_rabbitmq() {
     echo "RABBIT VERSION BEFORE status"
-    ls lahi /var/vcap/packages/rabbitmq-server/plugins/
+    ls -lahi /var/vcap/packages/rabbitmq-server/plugins/
     status_rabbitmq
     if [ "${RETVAL}" = 0 ]; then
         echo "RABBIT VERSION after status before stop"
-        ls lahi /var/vcap/packages/rabbitmq-server/plugins/
+        ls -lahi /var/vcap/packages/rabbitmq-server/plugins/
         set +e
         "${CONTROL}" stop "${PID_FILE}" >> "${SHUTDOWN_LOG}" 2>> "${SHUTDOWN_ERR_LOG}"
         RETVAL=$?
         set -e
         echo "RABBIT VERSION after status after stop"
-        ls lahi /var/vcap/packages/rabbitmq-server/plugins/
+        ls -lahi /var/vcap/packages/rabbitmq-server/plugins/
         if [ "${RETVAL}" = 0 ]; then
             __log ${SHUTDOWN_LOG} "RabbitMQ stopped, removing pidfile"
             remove_pid
