@@ -24,4 +24,3 @@ done
 
 cp -a rabbitmq-server/rabbitmq-defaults "$BOSH_INSTALL_TARGET/privbin/"
 
-cp -a "rabbitmq-server/rabbitmq_clusterer-$RMQ_VERSION.ez" "$BOSH_INSTALL_TARGET/plugins/"
