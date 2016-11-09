@@ -15,7 +15,7 @@ STDERR_LOG="${LOG_DIR}"/pre-start.stderr.log
 main() {
   run_script "${JOB_DIR}/bin/setup.sh"
   run_script "${JOB_DIR}/bin/plugins.sh"
-  prepare_for_upgrade
+  # prepare_for_upgrade
 }
 
 run_script() {
