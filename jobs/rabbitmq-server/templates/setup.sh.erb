@@ -151,7 +151,7 @@ disk_alarm_threshold = p("rabbitmq-server.disk_alarm_threshold")
     printf '' > ${DIR}/env.backup
   fi
 
-  RABBITMQ_BOOT_MODULE="RABBITMQ_BOOT_MODULE=rabbit_clusterer"
+  RABBITMQ_BOOT_MODULE="RABBITMQ_BOOT_MODULE=rabbit"
   ${SED} "/${PREFIX}/,/${SUFFIX}/d" < ${DIR}/env.backup > ${DIR}/env
   printf "${PREFIX}\n${NODENAME}\n${RABBITMQ_BOOT_MODULE}\n${CONFIG}\n${SERVER_START_ARGS}\n${SUFFIX}\n" >> ${DIR}/env
 
