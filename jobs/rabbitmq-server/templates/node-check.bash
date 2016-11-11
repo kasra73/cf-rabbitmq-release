@@ -7,6 +7,7 @@ LOG_DIR=/var/vcap/sys/log/rabbitmq-server
 
 main() {
   pid_file_contains_rabbitmq_erlang_vm_pid
+  rabbitmq_application_is_running
 }
 
 pid_file_contains_rabbitmq_erlang_vm_pid() {
@@ -16,6 +17,11 @@ pid_file_contains_rabbitmq_erlang_vm_pid() {
 
   [[ "$tracked_pid" = "$rabbitmq_erlang_vm_pid" ]] ||
   fail "Expected PID file to contain '$rabbitmq_erlang_vm_pid' but it contained '$tracked_pid'"
+}
+
+rabbitmq_application_is_running() {
+  rabbitmqctl node_health_check ||
+  fail "RabbitMQ application is not running"
 }
 
 fail() {
