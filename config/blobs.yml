@@ -1,8 +1,4 @@
 ---
-golang/go1.6.1.linux-amd64.tar.gz:
-  object_id: 6483bb0d-c45f-4b69-a732-d4cac4f88cc7
-  sha: c73492474dcc7a233772d27e948b74468d9f1849
-  size: 84824395
 haproxy/haproxy-1.6.4.tar.gz:
   object_id: f790a114-2611-4f78-8bf7-99f714c268d8
   sha: df3d7f216fe4974d9eac55d76c7f729560c6e975
@@ -15,10 +11,6 @@ cf-cli/cf-cli_6.19.0_linux_x86-64.tgz:
   object_id: 22ad54c4-568e-4ca3-aa73-12b691e3f678
   sha: 625170654ffa4568dae97b4d3915e87557b29261
   size: 6450885
-rabbitmq-server/rabbitmq_clusterer-3.6.5.ez:
-  object_id: aca4b381-2afc-487c-913a-643fef65b3d1
-  sha: 3469acac9d4b029cb7c8216d09a1f959a68c2e29
-  size: 58675
 golang/go1.7.3.linux-amd64.tar.gz:
   object_id: d2536f7c-5e75-4bcd-a25c-33d2e2760d21
   sha: ead40e884ad4d6512bcf7b3c7420dd7fa4a96140
@@ -27,7 +19,7 @@ erlang/otp_src_oss_18.3.4.4.tgz:
   object_id: 0cf2f5b4-36d4-487f-b738-934c47ce7e43
   sha: 0de974b4309cb59103a1feb6912e4c90fd509f4b
   size: 35429734
-rabbitmq-server/rabbitmq-server-generic-unix-3.6.6.902.tar.xz:
-  object_id: 6c170268-3375-434e-b0bf-92b5dd6b4e4f
-  sha: 33bd853ac870155f44c53bfafe19beea081bb709
-  size: 4567036
+rabbitmq-server/rabbitmq-server-generic-unix-3.6.6.1033.tar.xz:
+  object_id: ee23fa46-eb07-4e90-b9f1-6f1a280eedd8
+  sha: 5304832e8b4f484eb46395a3965646a11de8070f
+  size: 5334840

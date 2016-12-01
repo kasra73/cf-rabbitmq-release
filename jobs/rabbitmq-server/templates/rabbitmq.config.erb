@@ -1,8 +1,16 @@
 <% if p("rabbitmq-server.config", false) %>
 <%= p("rabbitmq-server.config").unpack("m0").first %>
 <% else %>
+<%
+require 'digest'
+
+rabbitmq_server_nodes = link('rabbitmq-server').instances.map do |instance|
+  "'rabbit@#{Digest::MD5.hexdigest(instance.address)}'"
+end
+%>
+
 [
-{rabbit, [ {collect_statistics_interval, 60000}] },
+{rabbit, [ {collect_statistics_interval, 60000}, {cluster_nodes, {[<%= rabbitmq_server_nodes.join(",") %>], disc}}] },
 {rabbitmq_management, [ {rates_mode, none}] }
 ].
 <% end %>
