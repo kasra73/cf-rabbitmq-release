@@ -322,7 +322,7 @@ in the deployment manifest:
         admin_username: "admin"
         api_url: http://api.bosh-lite.com
 
-If you use [cf-rabbitmq-lite.yml](./manifests/cf-rabbitmq-lite.yml), it includes the errand
+If you use [cf-rabbitmq.yml](../manifests/cf-rabbitmq.yml), it includes the errand
 for you.
 
 To run the errand, do
